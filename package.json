@@ -1,0 +1,17 @@
+{
+  "name": "define-plugin",
+  "version": "0.1.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [
+    "swc-plugin"
+  ],
+  "main": "target/wasm32-wasi/release/define_plugin.wasm",
+  "scripts": {
+    "build": "cp target/release/libenv_var_replacer.so . && PACKAGE_VERSION=testing API_ENDPOINT=https://api.example.com swc lib -d dist",
+    "prepublishOnly": "cargo build-wasi --release"
+  },
+  "files": [],
+  "preferUnplugged": true
+}

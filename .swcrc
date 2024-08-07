@@ -1,0 +1,17 @@
+{
+  "jsc": {
+    "parser": {
+      "syntax": "ecmascript",
+      "jsx": true
+    },
+    "experimental": {
+      "plugins": [
+        ["env_var_replacer", {
+            replacements: {
+                "VERSION": "PACKAGE_VERSION"
+              }
+          }]
+      ]
+    }
+  }
+}
